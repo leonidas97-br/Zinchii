@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | Zinchii</title>
+    <link rel="stylesheet" href="estilos_contacto.css">
+</head>
+
+<body>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-contacto">
+
+        <!-- ENCABEZADO DEL FORMULARIO -->
+        <header class="encabezado-contacto">
+            <div class="logo-contacto">
+                <img src="img/gato zinchhii.png" alt="Gato Zinchii" width="125px" height="150px">
+            </div>
+            <div class="presentacion-contacto">
+                <h1>¡Tu buena fortuna comienza aquí!</h1>
+                <h4>
+                    Nuestro gatito de la suerte está listo para atenderte.<br>
+                    Cuéntanos cómo podemos ayudarte.
+                </h4>
+                <nav>
+                    <p>¿Quires volver a la pagina principal?</p>
+                    <a href="pagina_ventas.html">"¡Presione aquí!"</a>
+                
+                </nav>
+            </div>
+        </header>
+
+        <hr>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="informacion-contacto">
+            <h2>Hablemos contigo</h2>
+            <p>¿Tienes dudas sobre nuestros productos?<br>
+            ¿Necesitas una cotización para tu empresa?<br>
+            Déjanos tus datos y nos pondremos en contacto contigo.</p>
+
+            <div class="medios-contacto">
+                <div class="contacto-celular">
+                    <h3>Celular</h3>
+                    <p> +51 919 929 939 </p>
+                </div>
+                <div class="contacto-redes">
+                    <h3>Nuestras redes sociales</h3>
+                    <a href="#" target="_blank">WhatsApp</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <main class="formulario-contacto">
+            <h2>Envíanos tu consulta</h2>
+            <p class="texto-formulario">
+                Completa los siguientes campos para que podamos atenderte.
+            </p>
+
+            <!-- CAMBIO IMPORTANTE: Agregado id="formClientes" aquí -->
+            <form id="formClientes" action="#" method="post">
+
+                <!-- DATOS DEL CLIENTE -->
+                <fieldset class="grupo-datos">
+                    <legend>Datos del cliente</legend>
+
+                    <div class="campo-formulario">
+                        <label for="tipo_cliente">Tipo de cliente *</label>
+                        <select id="tipo_cliente" name="tipo_cliente" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="natural">Persona natural</option>
+                            <option value="empresa">Empresa</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre completo o contacto responsable *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="correo" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="celular">Número de celular *</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ej. 987654321" autocomplete="tel" required>
+                    </div>
+
+                    <!-- DATOS ADICIONALES PARA EMPRESAS -->
+                    <div class="datos-empresa">
+                        <h3>Datos de la empresa (si corresponde)</h3>
+
+                        <div class="campo-formulario">
+                            <label for="nom_empresa">Razón social o nombre comercial</label>
+                            <input type="text" id="nom_empresa" name="empresa" placeholder="Nombre de la empresa">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="ruc">RUC (opcional)</label>
+                            <input type="text" id="ruc" name="ruc" placeholder="Número de RUC" inputmode="numeric" maxlength="11">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- MOTIVO DE CONSULTA -->
+                <fieldset class="grupo-consulta">
+                    <legend>Motivo de tu consulta</legend>
+
+                    <div class="campo-formulario">
+                        <label for="motivo">¿En qué podemos ayudarte? *</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Selecciona el motivo</option>
+                            <option value="productos">Consulta sobre productos</option>
+                            <option value="cotizacion">Solicitar una cotización</option>
+                            <option value="mayorista">Compras al por mayor</option>
+                            <option value="empresa">Atención para empresas</option>
+                            <option value="reclamo">Reclamo o inconveniente</option>
+                            <option value="otro">Otro motivo</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="mensaje">Cuéntanos los detalles *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..." required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- AUTORIZACIÓN Y ENVÍO -->
+                <div class="acciones-formulario">
+                    <label class="aceptacion">
+                        <input type="checkbox" name="acepta_contacto" required>
+                        Acepto que Zinchii utilice mis datos para responder a esta consulta.
+                    </label>
+
+                    <!-- CAMBIO IMPORTANTE: Agregado id="btn-enviar" -->
+                    <button type="submit" id="btn-enviar" class="btn-enviar">
+                        Enviar consulta
+                    </button>
+
+                    <!-- CAMBIO IMPORTANTE: Unificado a id="mostrar_mensaje" -->
+                    <p id="mostrar_mensaje"></p>
+
+                    <p class="nota-formulario">
+                        Los campos marcados con * son obligatorios.
+                    </p>
+                </div>
+
+            </form>
+        </main>
+
+        <!-- PIE DEL FORMULARIO -->
+        <footer class="pie-contacto">
+            <p>Zinchii © 2026 - Tu suerte, nuestra atención.</p>
+            <p>¡El gato de la fortuna espera tu mensaje!</p>
+        </footer>
+
+    </div>
+
+    <script type="module" src="Js/firebase.js"></script>
+</body>
+</html>

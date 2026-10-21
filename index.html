@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Zinchi" TiendaOnline</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-navbar">
+            <div class="contenedor-logo">
+                <img src="img/gato.png" alt="Logo Gato Afortunado">
+            </div>
+            <span>Zinchii</span>
+            <nav>
+                <a href="#productos">Productos</a>
+                <a href="contacto.html">Contactanos</a>
+                
+            </nav>
+        </div>
+        <button id="abrir-carrito">
+                🛒 Carrito (<span id="contador-carrito">0</span>)
+        </button>
+    </header>
+
+    <!-- Contenido principal -->
+
+
+    <!--- Carrusel de imagenes-->
+    <div class="carrusel">
+        <div class="contenedor-slide">
+
+            <div class="slide">
+                <img src="img/portada pricipal.png" alt="Imagen promocional de Zinchi">
+            </div>
+
+            <div class="slide">
+                <img src="img/confort-hogar-interior.jpg" alt="Imagen promocional de Zinchi">
+            </div>
+
+            <div class="slide">
+                <img src="img/Gemini_Generated_Image_npkc74npkc74npkc.jfif" alt="Productos de Zinchi">
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+
+        <section class="inicio">
+            <h2>Estrenando nuevo comercial</h2>
+            <p>
+                Encuentra los mejores productos tecnológicos, del hogar, salud e higene.
+            </p>
+            <a href="#secc-video" class="btn-productos">
+                Ver Video
+            </a>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section>
+            <h2 id="productos">Nuestros productos</h2>
+
+            <div class="contenedor-productos1">
+                <div class="card">
+                    <img src="img/510vRHaNkPL._AC_SL1200_.jpg" alt="Lamparas modernas">
+                    <h3>Nuevas lámparas</h3>
+                    <p>Nuevos diseños recién llegados para tu escritorio o habitación.</p>
+                    <p class="precio">S/ 45.50</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/OIP.webp" alt="Parlantes de alta gama">
+                    <h3>Parlantes con calidad de sonido</h3>
+                    <p>Potencia alta, conectividad Bluetooth y bajos profundos.</p>
+                    <p class="precio">S/ 79.90</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/media.webp" alt="Ventiladores Potentes">
+                    <h3>Ventiladores Cool</h3>
+                    <p>Potencia y calidad de enfriamiento silencioso.</p>
+                    <p class="precio">S/ 67.50</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/Aspiradora inteligente.webp" alt="Aspiradora Robot">
+                    <h3>Aspirador SmartRobot</h3>
+                    <p>El mejor asistente del hogar,si de limpiesa se trata.</p>
+                    <p class="precio">S/ 89.50</p>
+                    <button>Comprar</button>
+                </div>
+
+            </div>
+
+            <h2 id="productos">Nuevos productos</h2>
+
+            <div class="contenedor-productos2">
+                <div class="card">
+                    <img src="img/cocina electrica.webp" alt="Cocina electrica ahorradora">
+                    <h3>Cocina Electrica dos hornillas</h3>
+                    <p>Modelo compacto,con ultra poptencia y ahorrativa</p>
+                    <p class="precio">S/ 81.70</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/freidora de aire.webp" alt="Freidora Air Electrica">
+                    <h3>Freidora de aire </h3>
+                    <p> La mejor eleccion para una vida saludable.</p>
+                    <p class="precio">S/ 74.90</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/secadora de cabello.png" alt="Secador de cabello">
+                    <h3>Secador de cabelllo Moderno</h3>
+                    <p>Cuida y da estilo a tu cabello.</p>
+                    <p class="precio">S/ 60.00</p>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/Smartwach.webp" alt="Relog smart Elegante">
+                    <h3>SmartWatch Moderno</h3>
+                    <p>Accesorio de vestir con multiples funciones de conectividad.</p>
+                    <p class="precio">S/ 105.50</p>
+                    <button>Comprar</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <section id="secc-video" class="seccion-video">
+        <h2>Echa un vistazo a lo que tenemos...</h2>
+        <p>
+            Grandes productos a pequeños precios.
+        </p>
+        <div class="contenedor-video">
+            <video autoplay loop controls muted>
+                <source src="video/video_tecno.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+    </section>
+    <footer id="Contactanos">
+        <p>Zinchi &copy; 2026</p>
+        <p>contacto: import_zinchi@gmail.com</p>
+    </footer>
+
+    <!-- VENTANA MODAL DEL CARRITO -->
+    <div id="modal-carrito" class="modal-carrito" aria-hidden="true">
+
+        <div class="contenido-carrito" role="dialog" aria-modal="true" aria-labelledby="titulo-carrito">
+
+            <div class="encabezado-carrito">
+                <h2 id="titulo-carrito">Tu carrito Zinchii</h2>
+
+                <button id="cerrar-carrito" type="button" aria-label="Cerrar carrito">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Aquí aparecerán los productos añadidos -->
+            <div id="lista-carrito"></div>
+
+            <div class="resumen-carrito">
+                <p>
+                    Unidades:
+                    <strong id="total-unidades">0</strong>
+                </p>
+
+                <p>
+                    Total a pagar:
+                    <strong id="total-carrito">S/ 0.00</strong>
+                </p>
+            </div>
+
+            <button id="vaciar-carrito" type="button">
+                Vaciar carrito
+            </button>
+
+            <button id="continuar-compra" type="button">
+                Continuar compra
+            </button>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const carrito = [];
+
+const modal = document.getElementById('modal-carrito');
+const listaCarrito = document.getElementById('lista-carrito');
+const contadorCarrito = document.getElementById('contador-carrito');
+const totalUnidades = document.getElementById('total-unidades');
+const totalCarrito = document.getElementById('total-carrito');
+
+// ABRIR Y CERRAR LA VENTANA
+
+document.getElementById('abrir-carrito').addEventListener('click', () => {
+    modal.classList.add('abierto');
+    modal.setAttribute('aria-hidden', 'false');
+});
+
+function cerrarCarrito() {
+    modal.classList.remove('abierto');
+    modal.setAttribute('aria-hidden', 'true');
+}
+
+document.getElementById('cerrar-carrito')
+    .addEventListener('click', cerrarCarrito);
+
+modal.addEventListener('click', (evento) => {
+    if (evento.target === modal) {
+        cerrarCarrito();
+    }
+});
+
+document.addEventListener('keydown', (evento) => {
+    if (evento.key === 'Escape') {
+        cerrarCarrito();
+    }
+});
+
+
+// AÑADIR PRODUCTOS
+
+document.querySelectorAll('.card button').forEach((boton) => {
+
+    boton.addEventListener('click', () => {
+
+        const tarjeta = boton.closest('.card');
+        const nombre = tarjeta.querySelector('h3').textContent.trim();
+        const textoPrecio = tarjeta.querySelector('.precio').textContent;
+
+        const precio = Number(
+            textoPrecio.replace('S/', '').trim()
+        );
+
+        if (!Number.isFinite(precio) || precio < 0) {
+            alert('El precio de este producto no es válido.');
+            return;
+        }
+
+        // Revisamos si el producto ya está en el carrito
+        const productoExistente = carrito.find(
+            (producto) => producto.nombre === nombre
+        );
+
+        if (productoExistente) {
+            productoExistente.cantidad++;
+        } else {
+            carrito.push({
+                nombre: nombre,
+                precio: precio,
+                cantidad: 1
+            });
+        }
+
+        actualizarCarrito();
+    });
+
+});
+
+
+// ACTUALIZAR PRODUCTOS Y MONTOS
+
+function actualizarCarrito() {
+
+    listaCarrito.replaceChildren();
+
+    let unidades = 0;
+    let total = 0;
+
+    carrito.forEach((producto, indice) => {
+
+        unidades += producto.cantidad;
+        total += producto.precio * producto.cantidad;
+
+        const fila = document.createElement('div');
+        fila.className = 'producto-carrito';
+
+        const nombre = document.createElement('h3');
+        nombre.textContent = producto.nombre;
+
+        const detalle = document.createElement('p');
+        detalle.textContent =
+            'Precio unitario: S/ ' + producto.precio.toFixed(2);
+
+        const subtotal = document.createElement('p');
+        subtotal.textContent =
+            'Subtotal: S/ ' +
+            (producto.precio * producto.cantidad).toFixed(2);
+
+        const controles = document.createElement('div');
+        controles.className = 'controles-producto';
+
+        const botonMenos = document.createElement('button');
+        botonMenos.textContent = '−';
+        botonMenos.setAttribute('aria-label', 'Restar una unidad');
+
+        botonMenos.addEventListener('click', () => {
+            producto.cantidad--;
+
+            if (producto.cantidad <= 0) {
+                carrito.splice(indice, 1);
+            }
+
+            actualizarCarrito();
+        });
+
+        const cantidad = document.createElement('span');
+        cantidad.textContent = producto.cantidad;
+
+        const botonMas = document.createElement('button');
+        botonMas.textContent = '+';
+        botonMas.setAttribute('aria-label', 'Añadir una unidad');
+
+        botonMas.addEventListener('click', () => {
+            producto.cantidad++;
+            actualizarCarrito();
+        });
+
+        const botonEliminar = document.createElement('button');
+        botonEliminar.textContent = 'Eliminar';
+        botonEliminar.className = 'eliminar-producto';
+
+        botonEliminar.addEventListener('click', () => {
+            carrito.splice(indice, 1);
+            actualizarCarrito();
+        });
+
+        controles.append(
+            botonMenos,
+            cantidad,
+            botonMas,
+            botonEliminar
+        );
+
+        fila.append(nombre, detalle, subtotal, controles);
+        listaCarrito.appendChild(fila);
+    });
+
+    if (carrito.length === 0) {
+        const mensaje = document.createElement('p');
+        mensaje.textContent = 'Tu carrito está vacío.';
+        listaCarrito.appendChild(mensaje);
+    }
+
+    contadorCarrito.textContent = unidades;
+    totalUnidades.textContent = unidades;
+    totalCarrito.textContent = 'S/ ' + total.toFixed(2);
+}
+
+
+// VACIAR EL CARRITO
+
+document.getElementById('vaciar-carrito')
+    .addEventListener('click', () => {
+
+        carrito.length = 0;
+        actualizarCarrito();
+    });
+
+
+// CONTINUAR COMPRA (POR AHORA, SOLO UNA PRUEBA)
+
+document.getElementById('continuar-compra')
+    .addEventListener('click', () => {
+
+        if (carrito.length === 0) {
+            alert('Primero añade un producto al carrito.');
+            return;
+        }
+
+        alert(
+            'Tu pedido tiene ' + totalUnidades.textContent +
+            ' unidades y un total de ' + totalCarrito.textContent +
+            '. Falta implementar el proceso de compra.'
+        );
+    });
+
+actualizarCarrito();
+</script>
